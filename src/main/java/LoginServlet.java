@@ -7,15 +7,18 @@ import java.io.IOException;
 
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         if (request.getMethod().equalsIgnoreCase("post")) {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             if (username.equals("admin") && password.equals("password")) {
-                response.sendRedirect("/profile.jsp");
+                response.sendRedirect("/profile");
             } else {
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
+
         }
     }
 }

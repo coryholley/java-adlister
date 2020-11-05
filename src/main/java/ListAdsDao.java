@@ -2,8 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListAdsDao implements Ads {
-    private List<Ad> ads;
+    private static List<Ad> ads;
 
+    @Override
     public List<Ad> all() {
         if (ads == null) {
             ads = generateAds();
