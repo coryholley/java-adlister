@@ -15,7 +15,7 @@
 <h1>Ads</h1>
 <ul>
     <c:forEach var="ad" items="${ads}">
-        <li>Title: ${ad.title.toUpperCase()}
+        <li>TITLE: ${ad.title.toUpperCase()}
         <p>Description: ${ad.description}</p>
         </li>
         <hr>
