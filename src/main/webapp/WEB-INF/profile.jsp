@@ -12,5 +12,10 @@
         <h1>Hello, ${sessionScope.user}! Welcome to your profile.</h1>
     </div>
 
+    <div class="container">
+        <form action="/logout" method="POST">
+            <input type="submit" class="btn btn-primary" value="Logout">
+        </form>
+    </div>
 </body>
 </html>
